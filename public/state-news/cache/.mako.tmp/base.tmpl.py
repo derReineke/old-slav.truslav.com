@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1539948395.2331562
+_modified_time = 1539949846.0409422
 _enable_loop = True
 _template_filename = 'themes/maupassant/templates/base.tmpl'
 _template_uri = 'base.tmpl'
@@ -29,28 +29,27 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         _import_ns = {}
         _mako_get_namespace(context, 'base')._populate(_import_ns, ['*'])
-        date_fanciness = _import_ns.get('date_fanciness', context.get('date_fanciness', UNDEFINED))
-        set_locale = _import_ns.get('set_locale', context.get('set_locale', UNDEFINED))
-        def content():
-            return render_content(context._locals(__M_locals))
-        def extra_js():
-            return render_extra_js(context._locals(__M_locals))
-        content_footer = _import_ns.get('content_footer', context.get('content_footer', UNDEFINED))
-        lang = _import_ns.get('lang', context.get('lang', UNDEFINED))
-        body_end = _import_ns.get('body_end', context.get('body_end', UNDEFINED))
-        blog_url = _import_ns.get('blog_url', context.get('blog_url', UNDEFINED))
         js_date_format = _import_ns.get('js_date_format', context.get('js_date_format', UNDEFINED))
-        logo_url = _import_ns.get('logo_url', context.get('logo_url', UNDEFINED))
-        template_hooks = _import_ns.get('template_hooks', context.get('template_hooks', UNDEFINED))
-        description = _import_ns.get('description', context.get('description', UNDEFINED))
-        def extra_head():
-            return render_extra_head(context._locals(__M_locals))
-        search_form = _import_ns.get('search_form', context.get('search_form', UNDEFINED))
-        blog_title = _import_ns.get('blog_title', context.get('blog_title', UNDEFINED))
         base = _mako_get_namespace(context, 'base')
+        lang = _import_ns.get('lang', context.get('lang', UNDEFINED))
+        momentjs_locales = _import_ns.get('momentjs_locales', context.get('momentjs_locales', UNDEFINED))
+        body_end = _import_ns.get('body_end', context.get('body_end', UNDEFINED))
+        search_form = _import_ns.get('search_form', context.get('search_form', UNDEFINED))
+        template_hooks = _import_ns.get('template_hooks', context.get('template_hooks', UNDEFINED))
+        logo_url = _import_ns.get('logo_url', context.get('logo_url', UNDEFINED))
+        set_locale = _import_ns.get('set_locale', context.get('set_locale', UNDEFINED))
+        date_fanciness = _import_ns.get('date_fanciness', context.get('date_fanciness', UNDEFINED))
+        blog_title = _import_ns.get('blog_title', context.get('blog_title', UNDEFINED))
         def sourcelink():
             return render_sourcelink(context._locals(__M_locals))
-        momentjs_locales = _import_ns.get('momentjs_locales', context.get('momentjs_locales', UNDEFINED))
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
+        blog_url = _import_ns.get('blog_url', context.get('blog_url', UNDEFINED))
+        def content():
+            return render_content(context._locals(__M_locals))
+        content_footer = _import_ns.get('content_footer', context.get('content_footer', UNDEFINED))
+        def extra_js():
+            return render_extra_js(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer(str(set_locale(lang)))
@@ -75,9 +74,7 @@ def render_body(context,**pageargs):
         else:
             __M_writer('                <h1>')
             __M_writer(filters.html_escape(str(blog_title)))
-            __M_writer('</h1>\n                <h4>')
-            __M_writer(filters.html_escape(str(description)))
-            __M_writer('</h4>\n')
+            __M_writer('</h1>\n')
         __M_writer('        </div>\n\n        <div id="nav-menu">\n            <div class="bitcron_nav_container">\n                <div class="bitcron_nav">\n                    <div class="site_nav_wrap">\n                        <ul class="site_nav sm sm-base">\n                            ')
         __M_writer(str(base.html_navigation_links()))
         __M_writer('\n                            ')
@@ -183,6 +180,6 @@ def render_extra_js(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "themes/maupassant/templates/base.tmpl", "uri": "base.tmpl", "source_encoding": "utf-8", "line_map": {"23": 2, "26": 0, "55": 2, "56": 3, "57": 3, "58": 4, "59": 4, "64": 7, "65": 8, "66": 8, "67": 14, "68": 15, "69": 15, "70": 15, "71": 15, "72": 15, "73": 15, "74": 15, "75": 16, "76": 17, "77": 17, "78": 17, "79": 18, "80": 18, "81": 20, "82": 27, "83": 27, "84": 28, "85": 28, "86": 43, "87": 43, "92": 44, "93": 57, "94": 58, "95": 58, "96": 58, "97": 60, "98": 66, "99": 66, "100": 67, "101": 67, "102": 72, "103": 72, "108": 75, "109": 78, "110": 78, "111": 82, "112": 82, "113": 83, "114": 83, "115": 83, "116": 83, "121": 86, "122": 87, "123": 87, "124": 88, "125": 88, "131": 5, "139": 5, "145": 44, "158": 75, "171": 86, "184": 171}}
+{"filename": "themes/maupassant/templates/base.tmpl", "uri": "base.tmpl", "source_encoding": "utf-8", "line_map": {"23": 2, "26": 0, "54": 2, "55": 3, "56": 3, "57": 4, "58": 4, "63": 7, "64": 8, "65": 8, "66": 14, "67": 15, "68": 15, "69": 15, "70": 15, "71": 15, "72": 15, "73": 15, "74": 16, "75": 17, "76": 17, "77": 17, "78": 19, "79": 26, "80": 26, "81": 27, "82": 27, "83": 42, "84": 42, "89": 43, "90": 56, "91": 57, "92": 57, "93": 57, "94": 59, "95": 65, "96": 65, "97": 66, "98": 66, "99": 71, "100": 71, "105": 74, "106": 77, "107": 77, "108": 81, "109": 81, "110": 82, "111": 82, "112": 82, "113": 82, "118": 85, "119": 86, "120": 86, "121": 87, "122": 87, "128": 5, "136": 5, "142": 43, "155": 74, "168": 85, "181": 168}}
 __M_END_METADATA
 """
