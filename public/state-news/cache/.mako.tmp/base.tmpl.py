@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1539921759.3728821
+_modified_time = 1539945331.2473865
 _enable_loop = True
 _template_filename = 'themes/maupassant/templates/base.tmpl'
 _template_uri = 'base.tmpl'
@@ -29,41 +29,41 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         _import_ns = {}
         _mako_get_namespace(context, 'base')._populate(_import_ns, ['*'])
-        def extra_head():
-            return render_extra_head(context._locals(__M_locals))
-        body_end = _import_ns.get('body_end', context.get('body_end', UNDEFINED))
-        description = _import_ns.get('description', context.get('description', UNDEFINED))
-        blog_title = _import_ns.get('blog_title', context.get('blog_title', UNDEFINED))
-        base = _mako_get_namespace(context, 'base')
-        momentjs_locales = _import_ns.get('momentjs_locales', context.get('momentjs_locales', UNDEFINED))
+        logo_url = _import_ns.get('logo_url', context.get('logo_url', UNDEFINED))
+        content_footer = _import_ns.get('content_footer', context.get('content_footer', UNDEFINED))
+        template_hooks = _import_ns.get('template_hooks', context.get('template_hooks', UNDEFINED))
         def content():
             return render_content(context._locals(__M_locals))
-        js_date_format = _import_ns.get('js_date_format', context.get('js_date_format', UNDEFINED))
-        template_hooks = _import_ns.get('template_hooks', context.get('template_hooks', UNDEFINED))
-        set_locale = _import_ns.get('set_locale', context.get('set_locale', UNDEFINED))
-        def sourcelink():
-            return render_sourcelink(context._locals(__M_locals))
-        blog_url = _import_ns.get('blog_url', context.get('blog_url', UNDEFINED))
+        base = _mako_get_namespace(context, 'base')
         def extra_js():
             return render_extra_js(context._locals(__M_locals))
-        lang = _import_ns.get('lang', context.get('lang', UNDEFINED))
-        content_footer = _import_ns.get('content_footer', context.get('content_footer', UNDEFINED))
-        search_form = _import_ns.get('search_form', context.get('search_form', UNDEFINED))
-        logo_url = _import_ns.get('logo_url', context.get('logo_url', UNDEFINED))
         date_fanciness = _import_ns.get('date_fanciness', context.get('date_fanciness', UNDEFINED))
+        def sourcelink():
+            return render_sourcelink(context._locals(__M_locals))
+        body_end = _import_ns.get('body_end', context.get('body_end', UNDEFINED))
+        description = _import_ns.get('description', context.get('description', UNDEFINED))
+        momentjs_locales = _import_ns.get('momentjs_locales', context.get('momentjs_locales', UNDEFINED))
+        search_form = _import_ns.get('search_form', context.get('search_form', UNDEFINED))
+        lang = _import_ns.get('lang', context.get('lang', UNDEFINED))
+        js_date_format = _import_ns.get('js_date_format', context.get('js_date_format', UNDEFINED))
+        set_locale = _import_ns.get('set_locale', context.get('set_locale', UNDEFINED))
+        blog_title = _import_ns.get('blog_title', context.get('blog_title', UNDEFINED))
+        blog_url = _import_ns.get('blog_url', context.get('blog_url', UNDEFINED))
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
         __M_writer = context.writer()
-        __M_writer('\r\n')
+        __M_writer('\n')
         __M_writer(str(set_locale(lang)))
-        __M_writer('\r\n')
+        __M_writer('\n')
         __M_writer(str(base.html_headstart()))
-        __M_writer('\r\n')
+        __M_writer('\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'extra_head'):
             context['self'].extra_head(**pageargs)
         
 
-        __M_writer('\r\n')
+        __M_writer('\n')
         __M_writer(str(template_hooks['extra_head']()))
-        __M_writer('\r\n</head>\r\n<body>\r\n<div class="body_container">\r\n    <div id="header">\r\n        <div class="site-name">\r\n')
+        __M_writer('\n</head>\n<body>\n<div class="body_container">\n    <div id="header">\n        <div class="site-name">\n')
         if logo_url:
             __M_writer('            <a id="logo" href="')
             __M_writer(str(blog_url))
@@ -71,58 +71,58 @@ def render_body(context,**pageargs):
             __M_writer(str(logo_url))
             __M_writer('" alt="')
             __M_writer(filters.html_escape(str(blog_title)))
-            __M_writer('"></a>\r\n')
+            __M_writer('"></a>\n')
         else:
             __M_writer('                <h1>')
             __M_writer(filters.html_escape(str(blog_title)))
-            __M_writer('</h1>\r\n                <h4>')
+            __M_writer('</h1>\n                <h4>')
             __M_writer(filters.html_escape(str(description)))
-            __M_writer('</h4>\r\n')
-        __M_writer('        </div>\r\n\r\n        <div id="nav-menu">\r\n            <div class="bitcron_nav_container">\r\n                <div class="bitcron_nav">\r\n                    <div class="site_nav_wrap">\r\n                        <ul class="site_nav sm sm-base">\r\n                            ')
+            __M_writer('</h4>\n')
+        __M_writer('        </div>\n\n        <div id="nav-menu">\n            <div class="bitcron_nav_container">\n                <div class="bitcron_nav">\n                    <div class="site_nav_wrap">\n                        <ul class="site_nav sm sm-base">\n                            ')
         __M_writer(str(base.html_navigation_links()))
-        __M_writer('\r\n                            ')
+        __M_writer('\n                            ')
         __M_writer(str(template_hooks['menu']()))
-        __M_writer('\r\n                        </ul>\r\n                        <div class="clear clear_nav_inline_end"></div>\r\n                    </div>\r\n                </div>\r\n                <div class="clear clear_nav_end"></div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div id="layout">\r\n        <div class="pure-g">\r\n            <div class=" pure-u-24-24 pure-u-sm-24-24 pure-u-md-18-24 pure_cell">\r\n                <div class="content_container">\r\n                    <!--Body content-->\r\n                    <div class="row">\r\n                        ')
+        __M_writer('\n                        </ul>\n                        <div class="clear clear_nav_inline_end"></div>\n                    </div>\n                </div>\n                <div class="clear clear_nav_end"></div>\n            </div>\n        </div>\n    </div>\n    <div id="layout">\n        <div class="pure-g">\n            <div class=" pure-u-24-24 pure-u-sm-24-24 pure-u-md-18-24 pure_cell">\n                <div class="content_container">\n                    <!--Body content-->\n                    <div class="row">\n                        ')
         __M_writer(str(template_hooks['page_header']()))
-        __M_writer('\r\n                        ')
+        __M_writer('\n                        ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content'):
             context['self'].content(**pageargs)
         
 
-        __M_writer('\r\n                </div>\r\n                <!--End of body content-->\r\n                <div style="clear:both;height:0;"></div>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Sidebar -->\r\n\r\n        <div class=" pure-u-6-24 pure_cell">\r\n            <div id="sidebar">\r\n                <div class="widget">\r\n                    <div id="search_bar">\r\n')
+        __M_writer('\n                </div>\n                <!--End of body content-->\n                <div style="clear:both;height:0;"></div>\n            </div>\n        </div>\n\n        <!-- Sidebar -->\n\n        <div class=" pure-u-6-24 pure_cell">\n            <div id="sidebar">\n                <div class="widget">\n                    <div id="search_bar">\n')
         if search_form:
             __M_writer('                        ')
             __M_writer(str(search_form))
-            __M_writer('\r\n')
-        __M_writer('                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div id="footer">\r\n        ')
+            __M_writer('\n')
+        __M_writer('                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div id="footer">\n        ')
         __M_writer(str(content_footer))
-        __M_writer('\r\n        ')
+        __M_writer('\n        ')
         __M_writer(str(template_hooks['page_footer']()))
-        __M_writer('\r\n    </div>\r\n\r\n    <!--FIXME: put these somewhere                            -->\r\n    <!--%if len(translations) > 1:-->\r\n    <!--<li>')
+        __M_writer('\n    </div>\n\n    <!--FIXME: put these somewhere                            -->\n    <!--%if len(translations) > 1:-->\n    <!--<li>')
         __M_writer(str(base.html_translations()))
-        __M_writer('</li>-->\r\n    <!--%endif-->\r\n    <!--% if show_sourcelink:-->\r\n    <!--')
+        __M_writer('</li>-->\n    <!--%endif-->\n    <!--% if show_sourcelink:-->\n    <!--')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'sourcelink'):
             context['self'].sourcelink(**pageargs)
         
 
-        __M_writer('-->\r\n    <!--%endif-->\r\n    <link href="/assets/css/duoshuo.css" type="text/css" rel="stylesheet"/>\r\n    ')
+        __M_writer('-->\n    <!--%endif-->\n    <link href="/assets/css/duoshuo.css" type="text/css" rel="stylesheet"/>\n    ')
         __M_writer(str(base.late_load_js()))
-        __M_writer('\r\n    <script>$(\'a.image-reference:not(.islink) img:not(.islink)\').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>\r\n    <!-- fancy dates -->\r\n    <script>\r\n    moment.locale("')
+        __M_writer('\n    <script>$(\'a.image-reference:not(.islink) img:not(.islink)\').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>\n    <!-- fancy dates -->\n    <script>\n    moment.locale("')
         __M_writer(str(momentjs_locales[lang]))
-        __M_writer('");\r\n    fancydates(')
+        __M_writer('");\n    fancydates(')
         __M_writer(str(date_fanciness))
         __M_writer(', ')
         __M_writer(str(js_date_format))
-        __M_writer(');\r\n    </script>\r\n    <!-- end fancy dates -->\r\n    ')
+        __M_writer(');\n    </script>\n    <!-- end fancy dates -->\n    ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'extra_js'):
             context['self'].extra_js(**pageargs)
         
 
-        __M_writer('\r\n')
+        __M_writer('\n')
         __M_writer(str(body_end))
-        __M_writer('\r\n')
+        __M_writer('\n')
         __M_writer(str(template_hooks['body_end']()))
-        __M_writer('\r\n</body>\r\n</html>\r\n')
+        __M_writer('\n</body>\n</html>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -136,7 +136,7 @@ def render_extra_head(context,**pageargs):
         def extra_head():
             return render_extra_head(context)
         __M_writer = context.writer()
-        __M_writer('\r\n')
+        __M_writer('\n')
         return ''
     finally:
         context.caller_stack._pop_frame()

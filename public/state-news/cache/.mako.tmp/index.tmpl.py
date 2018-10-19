@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1539921760.5674298
+_modified_time = 1539945332.1184297
 _enable_loop = True
 _template_filename = 'themes/maupassant/templates/index.tmpl'
 _template_uri = 'index.tmpl'
@@ -36,46 +36,46 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        front_index_header = context.get('front_index_header', UNDEFINED)
-        def extra_head():
-            return render_extra_head(context._locals(__M_locals))
+        page_links = context.get('page_links', UNDEFINED)
+        helper = _mako_get_namespace(context, 'helper')
         parent = context.get('parent', UNDEFINED)
-        def content_header():
-            return render_content_header(context._locals(__M_locals))
-        comments = _mako_get_namespace(context, 'comments')
-        _link = context.get('_link', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
-        helper = _mako_get_namespace(context, 'helper')
         author_pages_generated = context.get('author_pages_generated', UNDEFINED)
-        prevlink = context.get('prevlink', UNDEFINED)
-        current_page = context.get('current_page', UNDEFINED)
-        posts = context.get('posts', UNDEFINED)
         prev_next_links_reversed = context.get('prev_next_links_reversed', UNDEFINED)
-        permalink = context.get('permalink', UNDEFINED)
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
         pagination = _mako_get_namespace(context, 'pagination')
-        page_links = context.get('page_links', UNDEFINED)
-        date_format = context.get('date_format', UNDEFINED)
-        pagekind = context.get('pagekind', UNDEFINED)
-        index_file = context.get('index_file', UNDEFINED)
         index_teasers = context.get('index_teasers', UNDEFINED)
+        _link = context.get('_link', UNDEFINED)
+        current_page = context.get('current_page', UNDEFINED)
+        index_file = context.get('index_file', UNDEFINED)
+        prevlink = context.get('prevlink', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
         nextlink = context.get('nextlink', UNDEFINED)
+        front_index_header = context.get('front_index_header', UNDEFINED)
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        date_format = context.get('date_format', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
+        pagekind = context.get('pagekind', UNDEFINED)
+        def content_header():
+            return render_content_header(context._locals(__M_locals))
+        permalink = context.get('permalink', UNDEFINED)
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
         __M_writer = context.writer()
-        __M_writer('\r\n')
-        __M_writer('\r\n')
-        __M_writer('\r\n')
-        __M_writer('\r\n\r\n')
+        __M_writer('\n')
+        __M_writer('\n')
+        __M_writer('\n')
+        __M_writer('\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'extra_head'):
             context['self'].extra_head(**pageargs)
         
 
-        __M_writer('\r\n\r\n')
+        __M_writer('\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content'):
             context['self'].content(**pageargs)
         
 
-        __M_writer('\r\n')
+        __M_writer('\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -84,20 +84,20 @@ def render_body(context,**pageargs):
 def render_extra_head(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        posts = context.get('posts', UNDEFINED)
+        parent = context.get('parent', UNDEFINED)
+        index_file = context.get('index_file', UNDEFINED)
+        permalink = context.get('permalink', UNDEFINED)
         def extra_head():
             return render_extra_head(context)
-        posts = context.get('posts', UNDEFINED)
-        index_file = context.get('index_file', UNDEFINED)
-        parent = context.get('parent', UNDEFINED)
-        permalink = context.get('permalink', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\r\n    ')
+        __M_writer('\n    ')
         __M_writer(str(parent.extra_head()))
-        __M_writer('\r\n')
+        __M_writer('\n')
         if posts and (permalink == '/' or permalink == '/' + index_file):
             __M_writer('        <link rel="prefetch" href="')
             __M_writer(str(posts[0].permalink()))
-            __M_writer('" type="text/html">\r\n')
+            __M_writer('" type="text/html">\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -106,79 +106,79 @@ def render_extra_head(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        front_index_header = context.get('front_index_header', UNDEFINED)
-        def content_header():
-            return render_content_header(context)
-        comments = _mako_get_namespace(context, 'comments')
-        _link = context.get('_link', UNDEFINED)
+        page_links = context.get('page_links', UNDEFINED)
+        helper = _mako_get_namespace(context, 'helper')
         def content():
             return render_content(context)
-        helper = _mako_get_namespace(context, 'helper')
         author_pages_generated = context.get('author_pages_generated', UNDEFINED)
-        prevlink = context.get('prevlink', UNDEFINED)
-        current_page = context.get('current_page', UNDEFINED)
-        posts = context.get('posts', UNDEFINED)
         prev_next_links_reversed = context.get('prev_next_links_reversed', UNDEFINED)
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
         pagination = _mako_get_namespace(context, 'pagination')
-        page_links = context.get('page_links', UNDEFINED)
-        date_format = context.get('date_format', UNDEFINED)
-        pagekind = context.get('pagekind', UNDEFINED)
         index_teasers = context.get('index_teasers', UNDEFINED)
+        _link = context.get('_link', UNDEFINED)
+        current_page = context.get('current_page', UNDEFINED)
+        prevlink = context.get('prevlink', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
         nextlink = context.get('nextlink', UNDEFINED)
+        front_index_header = context.get('front_index_header', UNDEFINED)
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        date_format = context.get('date_format', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
+        pagekind = context.get('pagekind', UNDEFINED)
+        def content_header():
+            return render_content_header(context)
         __M_writer = context.writer()
-        __M_writer('\r\n')
+        __M_writer('\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content_header'):
             context['self'].content_header(**pageargs)
         
 
-        __M_writer('\r\n')
+        __M_writer('\n')
         if 'main_index' in pagekind:
             __M_writer('    ')
             __M_writer(str(front_index_header))
-            __M_writer('\r\n')
+            __M_writer('\n')
         if page_links:
             __M_writer('    ')
             __M_writer(str(pagination.page_navigation(current_page, page_links, prevlink, nextlink, prev_next_links_reversed)))
-            __M_writer('\r\n')
+            __M_writer('\n')
         for post in posts:
-            __M_writer('    <div class="post">\r\n        <h2 class="post-title"><a href="')
+            __M_writer('    <div class="post">\n        <h2 class="post-title"><a href="')
             __M_writer(str(post.permalink()))
             __M_writer('" >')
             __M_writer(filters.html_escape(str(post.title())))
-            __M_writer('</a></h2>\r\n        <div class="post-meta">\r\n            ')
+            __M_writer('</a></h2>\n        <div class="post-meta">\n            ')
             __M_writer(filters.html_escape(str(post.formatted_date(date_format))))
-            __M_writer('\r\n        </div>\r\n        <div class="post-meta">\r\n')
+            __M_writer('\n        </div>\n        <div class="post-meta">\n')
             if author_pages_generated:
                 __M_writer('                <a href="')
                 __M_writer(str(_link('author', post.author())))
                 __M_writer('">')
                 __M_writer(filters.html_escape(str(post.author())))
-                __M_writer('</a>\r\n')
+                __M_writer('</a>\n')
             else:
                 __M_writer('                ')
                 __M_writer(filters.html_escape(str(post.author())))
-                __M_writer('\r\n')
-            __M_writer('        </div>\r\n        <div class="post-content">\r\n')
+                __M_writer('\n')
+            __M_writer('        </div>\n        <div class="post-content">\n')
             if index_teasers:
                 __M_writer('                ')
                 __M_writer(str(post.text(teaser_only=True)))
-                __M_writer('\r\n')
+                __M_writer('\n')
             else:
                 __M_writer('                ')
                 __M_writer(str(post.text(teaser_only=False)))
-                __M_writer('\r\n')
+                __M_writer('\n')
             if not post.meta('nocomments') and site_has_comments:
                 __M_writer('                <p class="commentline">')
                 __M_writer(str(comments.comment_link(post.permalink(), post._base_path)))
-                __M_writer('\r\n')
-            __M_writer('        </div>\r\n    </div>\r\n')
+                __M_writer('\n')
+            __M_writer('        </div>\n    </div>\n')
         __M_writer(str(helper.html_pager()))
-        __M_writer('\r\n')
+        __M_writer('\n')
         __M_writer(str(comments.comment_link_script()))
-        __M_writer('\r\n')
+        __M_writer('\n')
         __M_writer(str(helper.mathjax_script(posts)))
-        __M_writer('\r\n')
+        __M_writer('\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
