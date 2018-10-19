@@ -130,7 +130,3 @@
 'render_taxonomies:output\\categories\\state\\index.html', (169472, 1852)
 'render_taxonomies:output\\categories\\news.xml', (171520, 576)
 'copy_files:output\\images\\Patreon.png', (172544, 263)
-'render_sources:output\\posts\\economic-boom\\index.rst', (173056, 255)
-'render_pages:output\\posts\\economic-boom\\index.html', (173568, 4854)
-'render_posts:cache\\posts\\ECONOMIC-BOOM.html', (178688, 373)
-'copy_files:output\\images\\ECONOMIC.jpg', (179200, 265)
