@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "truslav-a1dff"
+    "default": "truslav-a1dff",
+    "truslav": "truslav-a1dff"
   }
 }
