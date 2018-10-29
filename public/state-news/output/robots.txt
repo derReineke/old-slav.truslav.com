@@ -1,4 +1,0 @@
-Sitemap: https://truslav.com/state-news/sitemapindex.xml
-
-User-Agent: *
-Host: truslav.com
