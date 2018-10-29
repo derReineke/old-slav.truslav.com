@@ -2,5 +2,14 @@
   "projects": {
     "default": "truslav-a1dff",
     "truslav": "truslav-a1dff"
+  },
+  "targets": {
+    "truslav-a1dff": {
+      "hosting": {
+        "site": [
+          "truslav-a1dff"
+        ]
+      }
+    }
   }
 }
