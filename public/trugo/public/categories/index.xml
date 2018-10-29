@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Truslavistan State News Archive</title>
+    <link>https://truslav.com/articles/categories/</link>
+    <description>Recent content in Categories on Truslavistan State News Archive</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>The Ministry of Current Happenings</copyright>
+    
+	<atom:link href="https://truslav.com/articles/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Economics</title>
+      <link>https://truslav.com/articles/categories/economics/</link>
+      <pubDate>Sat, 13 Oct 2018 16:27:52 -0400</pubDate>
+      
+      <guid>https://truslav.com/articles/categories/economics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Good</title>
+      <link>https://truslav.com/articles/categories/good/</link>
+      <pubDate>Tue, 09 Oct 2018 16:05:05 -0400</pubDate>
+      
+      <guid>https://truslav.com/articles/categories/good/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>News</title>
+      <link>https://truslav.com/articles/categories/news/</link>
+      <pubDate>Sat, 13 Oct 2018 16:27:52 -0400</pubDate>
+      
+      <guid>https://truslav.com/articles/categories/news/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nogood</title>
+      <link>https://truslav.com/articles/categories/nogood/</link>
+      <pubDate>Wed, 10 Oct 2018 16:17:32 -0400</pubDate>
+      
+      <guid>https://truslav.com/articles/categories/nogood/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Okay</title>
+      <link>https://truslav.com/articles/categories/okay/</link>
+      <pubDate>Sat, 13 Oct 2018 16:27:52 -0400</pubDate>
+      
+      <guid>https://truslav.com/articles/categories/okay/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>People</title>
+      <link>https://truslav.com/articles/categories/people/</link>
+      <pubDate>Sat, 13 Oct 2018 16:27:52 -0400</pubDate>
+      
+      <guid>https://truslav.com/articles/categories/people/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>State</title>
+      <link>https://truslav.com/articles/categories/state/</link>
+      <pubDate>Sat, 13 Oct 2018 16:27:52 -0400</pubDate>
+      
+      <guid>https://truslav.com/articles/categories/state/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wireless</title>
+      <link>https://truslav.com/articles/categories/wireless/</link>
+      <pubDate>Sat, 13 Oct 2018 16:27:52 -0400</pubDate>
+      
+      <guid>https://truslav.com/articles/categories/wireless/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
